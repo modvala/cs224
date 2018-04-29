@@ -27,7 +27,11 @@ def eval_numerical_gradient(f, x, verbose=True, h=0.00001):
     grad[ix] = (fxph - fxmh) / (2 * h) # the slope
     if verbose:
       print(ix, grad[ix])
+<<<<<<< HEAD
     it.iternex() # step to next dimension
+=======
+    it.iternext() # step to next dimension
+>>>>>>> 347ad79b98d0d525e12de7d36a9afa6b00c5907f
 
   return grad
 
@@ -120,6 +124,10 @@ def grad_check_sparse(f, x, analytic_grad, num_checks=10, h=1e-5):
     grad_numerical = (fxph - fxmh) / (2 * h)
     grad_analytic = analytic_grad[ix]
     rel_error = abs(grad_numerical - grad_analytic) / (abs(grad_numerical) + abs(grad_analytic))
+<<<<<<< HEAD
     print('numerical: %f analytic: %f, relative error: %e' % (grad_numerical, grad_analytic, rel_error))
 
+=======
+    print('numerical: {:f} analytic: {:f}, relative error: {:e}'.format(grad_numerical, grad_analytic, rel_error))
+>>>>>>> 347ad79b98d0d525e12de7d36a9afa6b00c5907f
 
